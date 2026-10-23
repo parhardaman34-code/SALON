@@ -1,0 +1,829 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}html{scroll-behavior:smooth;scroll-padding-top:110px;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-primary": "#ffffff", "on-surface": "#161c20", "primary-container": "#3a0f34", "surface-container-lowest": "#ffffff", "surface-container-low": "#eef4f9", "outline-variant": "#d2c2cb", "secondary-container": "#febb21", "secondary": "#7c5800", "on-primary-fixed-variant": "#66365c", "on-secondary-fixed": "#271900", "surface-container-high": "#e3e9ee", "on-background": "#161c20", "on-tertiary": "#ffffff", "surface-container": "#e9eff4", "on-tertiary-fixed": "#221826", "tertiary-fixed": "#efddf1", "on-surface-variant": "#4f444b", "primary-fixed-dim": "#f2b3e1", "tertiary": "#0f0613", "secondary-fixed-dim": "#febb21", "on-primary-container": "#af76a1", "background": "#f4faff", "inverse-surface": "#2b3135", "on-primary-fixed": "#34092e", "error-container": "#ffdad6", "on-error": "#ffffff", "tertiary-container": "#271d2b", "surface-variant": "#dde3e8", "primary": "#1a0017", "surface": "#f4faff", "surface-dim": "#d5dbe0", "tertiary-fixed-dim": "#d2c1d5", "surface-container-highest": "#dde3e8", "error": "#ba1a1a", "primary-fixed": "#ffd7f2", "on-tertiary-container": "#928396", "outline": "#81737b", "on-secondary": "#ffffff", "secondary-fixed": "#ffdea6", "on-tertiary-fixed-variant": "#4f4353", "on-secondary-fixed-variant": "#5e4200", "on-secondary-container": "#6c4d00", "on-error-container": "#93000a", "surface-tint": "#814d75", "inverse-primary": "#f2b3e1", "surface-bright": "#f4faff", "inverse-on-surface": "#ecf1f7" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "gutter": "1.5rem", "margin-lg": "5rem", "space-md": "1rem", "gutter-sm": "1rem", "space-xs": "0.25rem", "margin": "1.5rem", "gutter-lg": "2rem", "margin-md": "3rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-lg": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "display-lg-mobile": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "body-lg": [ "Plus Jakarta Sans" ], "headline-md": [ "Playfair Display" ], "label-lg": [ "Plus Jakarta Sans" ], "label-sm": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "label-md": [ "Plus Jakarta Sans" ], "display-lg": [ "Playfair Display" ], "headline-lg-mobile": [ "Playfair Display" ], "title-lg": [ "Plus Jakarta Sans" ] }, "fontSize": { "headline-lg": [ "40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "headline-sm": [ "22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "600" } ], "display-lg-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "600" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-md": [ "28px", { "lineHeight": "36px", "letterSpacing": "0", "fontWeight": "500" } ], "label-lg": [ "13px", { "lineHeight": "18px", "letterSpacing": "0.08em", "fontWeight": "700" } ], "label-sm": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.12em", "fontWeight": "600" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.015em", "fontWeight": "400" } ], "label-md": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600" } ], "display-lg": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "headline-lg-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "0", "fontWeight": "500" } ], "title-lg": [ "18px", { "lineHeight": "26px", "letterSpacing": "0.005em", "fontWeight": "600" } ] } } } };</script></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.06)] border-b border-outline-variant/20">
+  <div class="bg-primary-container text-on-primary py-space-xs px-margin md:px-margin-lg">
+    <div class="w-full flex flex-wrap items-center justify-between text-body-sm font-body-sm">
+      <div class="flex items-center gap-space-lg flex-wrap">
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[16px] text-secondary-container">location_on</span>
+          <span>10-A, Grand Trunk Rd, Model Town, Phagwara, Punjab 144401</span>
+        </div>
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[16px] text-secondary-container">call</span>
+          <a class="hover:underline font-medium" href="tel:09417440265">09417440265</a>
+        </div>
+      </div>
+      <div class="hidden sm:flex items-center gap-space-lg">
+        <span class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-lowest/10 text-secondary-fixed text-label-sm font-label-sm tracking-wider uppercase">
+          <span class="material-symbols-outlined text-[14px] text-secondary-container">auto_awesome</span>
+          LGBTQ+ Friendly &amp; Inclusive Space
+        </span>
+        <div class="flex items-center gap-space-xs">
+          <span class="material-symbols-outlined text-[16px] text-secondary-container">schedule</span>
+          <span>Open Daily: 10:00 AM â€“ 8:00 PM</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-20 w-full px-margin md:px-margin-lg flex items-center justify-between gap-space-md">
+    <a href="#home" class="flex items-center gap-space-md hover:opacity-90 transition-opacity">
+      <img alt="Roopsy Salon and Academy Logo" class="h-9 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhKXVQVRSgk8_FvtTwzfjP-Pqz7Dv3e4PNShmqggYV8ENQtGqmNuCzFLxfDfyli_qZDthSKesHnIZgJidAKfZg00vO1YD-KuH9qTKTNPy6FALEjImbABNxrEkUy-D2P3LZTEPVPAlrAt5Rc3ZAw5__i8syL6YfYoabKJYndk2Cwd05w4jl3uJ6lG0zN-rfXkJ6FQFvZcQgdjGJy-bIE8XWYjjMNCzIv4kNOEYstdrvCqgNc_fzqFDc"/>
+      <div class="flex flex-col">
+        <span class="font-headline-sm text-headline-sm tracking-tight text-primary leading-none">Roopsy</span>
+        <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Salon &amp; Academy â€¢ Est. 1998</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Menu -->
+    <nav class="hidden xl:flex items-center gap-space-md 2xl:gap-space-lg" id="desktop-nav">
+      <a class="nav-item transition-colors font-medium text-body-md text-primary font-bold hover:text-secondary" href="#home">Home</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#services-menu">Salon Services</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#bridal-studio">Bridal Studio</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#hair-skin-care">Hair &amp; Skin Care</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#academy-section">Academy &amp; Courses</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#gallery-and-tour">Gallery &amp; Tour</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#about-us">About Us</a>
+      <a class="nav-item transition-colors font-medium text-body-md text-on-surface-variant hover:text-primary" href="#appointment-form">Contact</a>
+    </nav>
+
+    <!-- Header CTAs & Mobile Hamburger -->
+    <div class="flex items-center gap-space-xs sm:gap-space-md">
+      <a class="hidden md:inline-flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low text-primary-container font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container hover:text-primary transition-all" href="tel:09417440265">
+        <span class="material-symbols-outlined text-[16px]">phone_in_talk</span>
+        Call Now
+      </a>
+      <a class="inline-flex items-center gap-space-xs px-space-md sm:px-space-lg py-space-sm rounded-lg bg-secondary-container text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider shadow-[0_4px_18px_rgba(234,170,0,0.35)] hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" href="#appointment-form">
+        <span class="material-symbols-outlined text-[16px]">calendar_month</span>
+        <span class="hidden xs:inline">Book Appointment</span>
+        <span class="xs:hidden">Book</span>
+      </a>
+
+      <!-- Mobile Hamburger Toggle Button -->
+      <button id="mobile-menu-btn" class="xl:hidden p-2 rounded-lg text-primary hover:bg-surface-container flex items-center justify-center transition-colors focus:outline-none" aria-label="Toggle navigation menu">
+        <span class="material-symbols-outlined text-[28px]" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Responsive Mobile Navigation Drawer -->
+  <div id="mobile-nav" class="hidden xl:hidden w-full bg-surface/98 backdrop-blur-2xl border-t border-outline-variant/30 px-margin sm:px-margin-md py-space-md space-y-space-sm shadow-xl transition-all">
+    <div class="flex flex-col space-y-1">
+      <a href="#home" class="mobile-nav-link py-2.5 px-3 rounded-lg text-primary font-bold hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Home</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#services-menu" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Salon Services</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#bridal-studio" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Bridal Studio</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#hair-skin-care" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Hair &amp; Skin Care</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#academy-section" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Academy &amp; Courses</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#gallery-and-tour" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Gallery &amp; Sanctuary Tour</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#about-us" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>About Us</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+      <a href="#appointment-form" class="mobile-nav-link py-2.5 px-3 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors flex items-center justify-between">
+        <span>Contact &amp; Visit</span>
+        <span class="material-symbols-outlined text-[18px] text-secondary">chevron_right</span>
+      </a>
+    </div>
+    <div class="pt-3 border-t border-outline-variant/30 flex flex-col sm:flex-row gap-2">
+      <a href="tel:09417440265" class="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-surface-container text-primary font-semibold text-body-sm">
+        <span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+        09417440265
+      </a>
+      <a href="#appointment-form" class="mobile-nav-link flex-1 flex items-center justify-center gap-2 py-2.5 rounded-lg bg-secondary-container text-on-secondary-fixed font-semibold text-body-sm shadow-sm">
+        <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+        Book Appointment
+      </a>
+    </div>
+  </div>
+</header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- HERO SECTION -->
+<section class="relative w-full overflow-hidden bg-surface-container-high py-space-xl" id="home">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-high via-surface/40 to-transparent pointer-events-none"></div>
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Hero Text Content -->
+<div class="lg:col-span-7 flex flex-col items-start space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Model Town, Phagwara • Est. 1998</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">
+            Elegance Redefined,<br/>
+<span class="italic font-normal text-secondary">Artistry Mastered</span> Since 1998
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            North India's premier sanctuary for couture bridal styling, transformative hair aesthetics, and accredited vocational diploma education in the heart of Punjab.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-lg bg-secondary-container text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider shadow-md hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-all" href="#appointment-form">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+              Book an Appointment
+            </a>
+<a class="inline-flex items-center gap-space-xs px-space-lg py-3 rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all" href="#academy-section">
+<span class="material-symbols-outlined text-[18px]">school</span>
+              Explore Academy Courses
+            </a>
+</div>
+<!-- Trust Signals & Badges Strip -->
+<div class="grid grid-cols-3 gap-gutter-sm pt-space-md w-full max-w-lg">
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col items-start">
+<div class="flex items-center text-secondary mb-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-title-lg text-title-lg text-primary leading-tight">4.8+ Google</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Verified Reviews</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col items-start">
+<span class="font-title-lg text-title-lg text-primary leading-tight">26+ Years</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Continuous Mastery</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg shadow-sm flex flex-col items-start">
+<div class="flex items-center gap-1 text-primary-container mb-0.5">
+<span class="material-symbols-outlined text-[18px] text-secondary">diversity_1</span>
+<span class="font-title-lg text-title-lg text-primary leading-tight">Inclusive</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">LGBTQ+ Affirming</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Composition with Provided Asset -->
+<div class="lg:col-span-5 relative mt-space-lg lg:mt-0">
+<div class="relative w-full rounded-2xl overflow-hidden shadow-xl aspect-[4/5] bg-surface-container">
+<img alt="Roopsy Salon and Academy Modern Architectural Facade at Model Town Phagwara" class="w-full h-full object-cover" src="images/exterior.jpg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-space-md left-space-md right-space-md bg-surface-container-lowest/90 backdrop-blur-md p-space-md rounded-xl shadow-lg">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold block">Grand Trunk Road Sanctuary</span>
+<p class="font-title-lg text-title-lg text-primary">State-of-the-Art Aesthetic Facility</p>
+</div>
+<div class="w-10 h-10 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Decorative Floating Card -->
+<div class="hidden sm:flex absolute -bottom-6 -left-6 bg-primary-container text-on-primary p-space-md rounded-xl shadow-xl flex-col max-w-[210px] space-y-1">
+<div class="flex items-center gap-1 text-secondary-container">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">ISO &amp; Gov Aligned</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-primary">Recognized Certification Academy in Punjab</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- AMBIANCE & SANCTUARY TOUR (Featuring Authentic Salon Photographs) -->
+<section class="w-full py-space-xl bg-surface" id="gallery-and-tour">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Immersive Spaces</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-space-xs">Couture Comfort &amp; World-Class Facilities</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+          Step into our multi-story boutique sanctuary crafted with imported ergonomic Italian wash systems, private bridal lounges, and a precision formulation color lab.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Photo 1: Hair Wash Lounge -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] w-full overflow-hidden relative group">
+<img alt="Luxe Rejuvenation Spa and Hair Wash Lounge with Italian shampoo basins and crystal chandelier" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/hair-wash-lounge.jpg"/>
+<div class="absolute top-space-sm right-space-sm bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-1 rounded-full text-label-sm font-label-sm uppercase text-primary font-bold">
+              Private Spa
+            </div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<span class="font-title-lg text-title-lg text-primary block">Luxe Rejuvenation &amp; Wash Lounge</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Complete with warm ambient halo ceiling rings, custom artisanal crystal chandeliers, and ergonomic lie-flat shampoo recliners for deep conditioning therapies.
+            </p>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px]">spa</span>
+              Deep Scalp Rituals Available
+            </div>
+</div>
+</div>
+<!-- Photo 2: Product & Formulation Bar -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] w-full overflow-hidden relative group">
+<img alt="Signature Hair Spa and Color Formulation Station showcasing premium salon care collections" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/color-bar-products.jpg"/>
+<div class="absolute top-space-sm right-space-sm bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-1 rounded-full text-label-sm font-label-sm uppercase text-primary font-bold">
+              Aesthetic Dispensary
+            </div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<span class="font-title-lg text-title-lg text-primary block">Signature Color &amp; Formulation Bar</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Featuring illuminated floating ledges housing authentic European formulation shades, bond-builders, and botanical hair nourishment regimes.
+            </p>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+              Kérastase &amp; L'Oréal Certified Lab
+            </div>
+</div>
+</div>
+<!-- Photo 3: Modern Landmark Exterior -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] w-full overflow-hidden relative group">
+<img alt="Roopsy Salon and Academy exterior landmark on Grand Trunk Road in Model Town Phagwara" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/exterior.jpg"/>
+<div class="absolute top-space-sm right-space-sm bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-1 rounded-full text-label-sm font-label-sm uppercase text-primary font-bold">
+              Landmark
+            </div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<span class="font-title-lg text-title-lg text-primary block">Grand Trunk Road Landmark</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              An iconic tinted glass multi-level architecture equipped with VIP bridal suites, dedicated theory academy amphitheaters, and private client valet parking.
+            </p>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px]">location_on</span>
+              10-A Model Town, Phagwara
+            </div>
+</div>
+</div>
+<!-- Photo 4: Luxury Spa & Facial Treatment Suite -->
+<div class="flex flex-col rounded-xl overflow-hidden bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="aspect-[4/5] w-full overflow-hidden relative group">
+<img alt="Tranquil aesthetic treatment and facial therapy suite with private curtains" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="images/spa-treatment-room.jpg"/>
+<div class="absolute top-space-sm right-space-sm bg-surface-container-lowest/80 backdrop-blur-md px-space-sm py-1 rounded-full text-label-sm font-label-sm uppercase text-primary font-bold">
+Skin &amp; Spa Suite
+</div>
+</div>
+<div class="p-space-md space-y-space-xs">
+<span class="font-title-lg text-title-lg text-primary block">Private Skin &amp; Spa Sanctuary</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+Serene private therapy suites with acoustic comfort, tailored atmospheric lighting, and ergonomic treatment beds for clinical facials.
+</p>
+<div class="pt-space-xs flex items-center gap-space-xs text-secondary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px]">clean_hands</span>
+Hydra &amp; Medi-Facials
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SALON SERVICES SHOWCASE (Interactive & Editorial) -->
+<section class="w-full py-space-xl bg-surface-container" id="services-menu">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-lg">
+<div class="flex flex-col items-center text-center space-y-space-xs max-w-2xl mx-auto">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Curated Menu</span>
+<h2 class="font-headline-md text-headline-md text-primary">Master Tier Treatments &amp; Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Indulge in couture bridal artistry, clinical medical-grade facial rituals, and hair restructuring formulas executed by licensed senior specialists.
+        </p>
+</div>
+<!-- Service Category Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Card 1: Bridal Studio -->
+<div id="bridal-studio" class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">brush</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Regal Experience</span>
+<h3 class="font-title-lg text-title-lg text-primary">Bridal Couture Makeover</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              HD Airbrush makeup, traditional Punjabi bridal draping, jewelry setting, and customized pre-bridal glow packages.
+            </p>
+<ul class="space-y-1 text-body-sm font-body-sm text-on-surface-variant pt-space-xs">
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Airbrush &amp; Ultra HD options</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Private bridal suite dressing</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Includes hair couture &amp; lenses</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Consultation</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">From ₹14,999</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-all" href="#appointment-form">Book</a>
+</div>
+</div>
+<!-- Card 2: Hair Artistry -->
+<div id="hair-skin-care" class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">content_cut</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Transformations</span>
+<h3 class="font-title-lg text-title-lg text-primary">Advanced Hair Restructuring</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Dimensional Balayage, Brazilian Keratin, Hair Botox, Nanoplastia, and customized precision styling.
+            </p>
+<ul class="space-y-1 text-body-sm font-body-sm text-on-surface-variant pt-space-xs">
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Formaldehyde-free formulas</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> European balayage foils</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Intensive Kérastase deep fusion</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Treatment</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">From ₹3,499</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-all" href="#appointment-form">Book</a>
+</div>
+</div>
+<!-- Card 3: Skin Rituals -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">clean_hands</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Clinical Aesthetics</span>
+<h3 class="font-title-lg text-title-lg text-primary">Hydra &amp; Clinical Skin Facials</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Multi-step vortex dermal infusion, Korean Glass Skin protocols, brightening collagen therapies, and anti-pigmentation.
+            </p>
+<ul class="space-y-1 text-body-sm font-body-sm text-on-surface-variant pt-space-xs">
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> 7-in-1 Hydro-dermabrasion</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Ultrasonic deep pore extraction</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Cryo-cooling skin tightener</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Session</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">From ₹2,499</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-all" href="#appointment-form">Book</a>
+</div>
+</div>
+<!-- Card 4: Nails & Wellness -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between hover:-translate-y-1 transition-all duration-300">
+<div class="space-y-space-sm">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[28px]">spa</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-semibold">Bespoke Wellness</span>
+<h3 class="font-title-lg text-title-lg text-primary">Luxury Pedicure &amp; Gel Nails</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Aromatherapy candle pedicures, French acrylic extensions, ombre chrome art, and reflexology hand rituals.
+            </p>
+<ul class="space-y-1 text-body-sm font-body-sm text-on-surface-variant pt-space-xs">
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> 100% Autoclave sterilised tools</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Non-toxic long wear gels</li>
+<li class="flex items-center gap-1"><span class="material-symbols-outlined text-secondary text-[16px]">check</span> Volcanic stone massage</li>
+</ul>
+</div>
+<div class="pt-space-md mt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-md rounded-b-xl flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant block">Duration: 60m</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">From ₹1,199</span>
+</div>
+<a class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary font-label-sm text-label-sm uppercase tracking-wider hover:bg-primary transition-all" href="#appointment-form">Book</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ACADEMY SECTION -->
+<section class="w-full py-space-xl bg-surface" id="academy-section">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="bg-primary-container text-on-primary rounded-2xl p-space-lg md:p-space-xl shadow-xl relative overflow-hidden">
+<!-- Subtle Glow overlay -->
+<div class="absolute -right-20 -top-20 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center relative z-10">
+<div class="lg:col-span-7 space-y-space-md">
+<div class="inline-flex items-center gap-space-xs px-space-md py-1 rounded-full bg-surface-container-lowest/10 text-secondary-fixed">
+<span class="material-symbols-outlined text-[16px]">workspace_premium</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-bold">Government Certified Vocational Center</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-primary">
+              Shape Your High-Earning Career at <br/>
+<span class="text-secondary-container">Roopsy Beauty Academy</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-tertiary-container max-w-xl">
+              Turn your creative passion into an internationally accredited vocation. Train directly with award-winning cosmetologists in real commercial studio environments in Phagwara.
+            </p>
+<!-- Course Offerings List -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-sm pt-space-xs">
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm space-y-1">
+<span class="font-title-lg text-title-lg text-on-primary block">Diploma in Cosmetology</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Complete skin, hair, and makeup curriculum (6 Months / 1 Year)</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm space-y-1">
+<span class="font-title-lg text-title-lg text-on-primary block">Master Bridal Artistry</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Airbrush, prosthetic bridal techniques &amp; editorial styling (3 Months)</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm space-y-1">
+<span class="font-title-lg text-title-lg text-on-primary block">Professional Hairdressing</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Chemical formulation, coloring, and European haircuts (4 Months)</p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-lowest/10 backdrop-blur-sm space-y-1">
+<span class="font-title-lg text-title-lg text-on-primary block">Nail Tech &amp; Extensions</span>
+<p class="font-body-sm text-body-sm text-on-tertiary-container">Gel, acrylic, polygel, 3D nail sculptures, and salon operations (45 Days)</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+<a class="px-space-lg py-3 rounded-lg bg-secondary-container text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider shadow-md hover:bg-secondary-fixed transition-all inline-flex items-center gap-2" href="tel:09417440265">
+<span class="material-symbols-outlined text-[18px]">phone</span>
+                Call for Admissions: 09417440265
+              </a>
+<button class="px-space-lg py-3 rounded-lg bg-surface-container-lowest/10 text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-lowest/20 transition-all inline-flex items-center gap-2" onclick="document.getElementById('appointment-form').scrollIntoView({behavior: 'smooth'})">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                Request Prospectus 2025
+              </button>
+</div>
+</div>
+<!-- Feature Metric Column -->
+<div class="lg:col-span-5 space-y-space-md">
+<div class="bg-surface-container-lowest p-space-lg rounded-xl text-on-surface shadow-lg space-y-space-md">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold block">Why Train at Roopsy</span>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">groups</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">Real Studio Client Exposure</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Work on live bridal parties and walk-in salon clients instead of just practice mannequin dummies.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">100% Career &amp; Placement Aid</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Graduates placed in luxury salons across Punjab, Canada, the UK, and international destination bridal teams.</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</div>
+<div>
+<h4 class="font-title-lg text-title-lg text-primary">Comprehensive Student Kit Included</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Receive professional brushes, shears, hair tools, and cosmetic kits with your enrollment.</p>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Admissions Status</span>
+<span class="font-title-lg text-title-lg text-secondary font-bold block">March 2025 Batch Open</span>
+</div>
+<span class="w-3 h-3 rounded-full bg-secondary-container animate-ping"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WHY CHOOSE ROOPSY (Heritage, Hygiene & Inclusivity) -->
+<section class="w-full py-space-xl bg-surface-container-high" id="about-us">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-lg">
+<div class="text-center max-w-2xl mx-auto space-y-space-xs">
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">The Roopsy Benchmark</span>
+<h2 class="font-headline-md text-headline-md text-primary">Crafted with Heritage &amp; Heart</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Over 26 years of uncompromising dedication to hygienic luxury and warm, inclusive Punjabi hospitality.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col space-y-space-xs">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/50 text-on-secondary-fixed flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[26px]">diversity_1</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">100% Inclusive &amp; LGBTQ+ Affirming</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            A safe, welcoming sanctuary where everyone is embraced. We celebrate every gender, identity, and personal aesthetic without compromise.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col space-y-space-xs">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[26px]">history_edu</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Heritage Since 1998</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Over a quarter-century of pioneering beauty standards in Phagwara. Trusted by three generations of Punjab's most discerning families.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col space-y-space-xs">
+<div class="w-12 h-12 rounded-lg bg-surface-container-low text-primary flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[26px]">sanitizer</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Hospital-Grade Sterilization</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Autoclaved instruments, single-use client kits, filtered water wash basins, and pristine treatment suites ensure total peace of mind.
+          </p>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col space-y-space-xs">
+<div class="w-12 h-12 rounded-lg bg-secondary-fixed/50 text-on-secondary-fixed flex items-center justify-center mb-1">
+<span class="material-symbols-outlined text-[26px]">award_star</span>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary">Premium Global Formulations</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            We partner exclusively with authentic prestige cosmetic houses: L'Oréal Professionnel, Kérastase, Schwarzkopf, and MAC.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- VERIFIED CLIENT & BRIDAL REVIEWS -->
+<section class="w-full py-space-xl bg-surface" id="reviews">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg space-y-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Client Voices</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-space-xs">Loved by Brides, Salon Patrons &amp; Academy Alumni</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-title-lg text-title-lg font-bold text-primary">4.8 / 5.0</span>
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">on Google Maps</span>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Review 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Roopsy did my complete bridal and pre-bridal makeup for my wedding in Phagwara. The attention to detail, private suite comfort, and flawless airbrush glow stayed intact through 14 hours of Punjabi ceremonies. Highly recommended!"
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">
+              SK
+            </div>
+<div>
+<span class="font-title-lg text-title-lg text-primary block leading-tight">Simran Kaur</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Bridal Client • Phagwara</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "Completed my 6-month Cosmetology Diploma here in 2024. The practical client hours and teachers gave me the exact confidence I needed. I am now working full-time in Vancouver with my international diploma."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">
+              AJ
+            </div>
+<div>
+<span class="font-title-lg text-title-lg text-primary block leading-tight">Amanat Johal</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Academy Alumni (Cosmetology)</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between space-y-space-md">
+<div class="space-y-space-xs">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface italic">
+              "The salon is truly magnificent. The new hair wash area with the chandelier and the color formulation lab feels like a high-end Mayfair London salon. Plus, so courteous and LGBTQ+ affirming."
+            </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs border-t border-surface-container">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center font-bold text-primary">
+              RS
+            </div>
+<div>
+<span class="font-title-lg text-title-lg text-primary block leading-tight">Rohan Sharma</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Hair &amp; Facial Patron</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- APPOINTMENT BOOKING & VISIT SECTION -->
+<section class="w-full py-space-xl bg-surface-container" id="appointment-form">
+<div class="max-w-[1360px] mx-auto px-margin md:px-margin-md lg:px-margin-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Direct Location & Contact Details -->
+<div class="lg:col-span-5 space-y-space-md">
+<div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Plan Your Experience</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-space-xs">Visit Our Model Town Flagship</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs">
+              Located conveniently on Grand Trunk Road in Phagwara, with ample private parking, wheelchair-accessible entrances, and custom consultation suites.
+            </p>
+</div>
+<!-- Location Info Box -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">location_on</span>
+<div>
+<span class="font-title-lg text-title-lg text-primary block">Flagship Address</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">10-A, Grand Trunk Rd, Model Town, Phagwara, Punjab 144401</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">schedule</span>
+<div>
+<span class="font-title-lg text-title-lg text-primary block">Operating Hours</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Monday to Sunday: 10:00 AM – 8:00 PM</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">call</span>
+<div>
+<span class="font-title-lg text-title-lg text-primary block">Direct Concierge Phone</span>
+<a class="font-title-lg text-title-lg text-primary font-bold hover:underline" href="tel:09417440265">09417440265</a>
+</div>
+</div>
+</div>
+<!-- Google Maps Static Pipeline Preview Card -->
+<div class="rounded-xl overflow-hidden shadow-sm relative group">
+<div class="w-full h-48 bg-cover bg-center rounded-xl relative" data-alt="A clean modern map showing Phagwara Punjab Grand Trunk road location with navigation pin points in subtle ice silver and deep plum accents" data-location="10-A, Grand Trunk Rd, Model Town, Phagwara, Punjab 144401" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBTB2qQtFL_IdnrNPghUZ5S5C0_eq361K997Bx1zkpjruC11l3OWk_GZmifqhAELD2KBLlTk1ISahw5L5rvyqyT81htlvKVhp06GB-Z9ifLLuLWqF4Bbby8eM2FgXUkXt9BbmCeMnJGkal0gRq75Lm-9BtWFL6l27KTHTGl-DlJK82BUAat8Vtu2NcOj1mZWNmOiDaydOLpjohLKJa0QJi918eP1sDwguc2L6NGY8QEg_XPn9TpLkpi')"></div>
+<a class="absolute inset-0 bg-primary/40 backdrop-blur-xs flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-on-primary font-label-md text-label-md uppercase tracking-wider gap-2" href="https://maps.google.com/?q=10-A,+Grand+Trunk+Rd,+Model+Town,+Phagwara,+Punjab+144401" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined">directions</span>
+              Open Navigation in Google Maps
+            </a>
+</div>
+</div>
+<!-- Interactive Fast Booking / Academy Inquiry Form -->
+<div class="lg:col-span-7">
+<div class="bg-surface-container-lowest p-space-lg md:p-space-xl rounded-2xl shadow-md">
+<div class="mb-space-md">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Fast Appointment &amp; Admission Inquiry</span>
+<h3 class="font-headline-sm text-headline-sm text-primary mt-1">Reserve Your Slot or Consultation</h3>
+</div>
+<form class="space-y-space-md" id="booking-inquiry-form" onsubmit="event.preventDefault(); document.getElementById('form-success-banner').classList.remove('hidden');">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block mb-1" for="client-name">Your Full Name</label>
+<input class="w-full p-space-sm rounded-lg bg-surface-container-low text-primary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" id="client-name" placeholder="e.g. Jasleen Kaur" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block mb-1" for="client-phone">Phone Number</label>
+<input class="w-full p-space-sm rounded-lg bg-surface-container-low text-primary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" id="client-phone" placeholder="094174 40265" required="" type="tel"/>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block mb-1" for="service-category">Interest / Department</label>
+<select class="w-full p-space-sm rounded-lg bg-surface-container-low text-primary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" id="service-category">
+<option value="bridal">Bridal Couture &amp; Pre-Bridal</option>
+<option value="hair">Hair Transformation (Keratin/Balayage)</option>
+<option value="skin">Clinical Skin &amp; Hydra Facial</option>
+<option value="academy-cosmetology">Academy: Cosmetology Diploma</option>
+<option value="academy-makeup">Academy: Professional Makeup Artistry</option>
+<option value="nails">Luxury Nail Extensions &amp; Spa</option>
+</select>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block mb-1" for="preferred-date">Preferred Date</label>
+<input class="w-full p-space-sm rounded-lg bg-surface-container-low text-primary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" id="preferred-date" type="date"/>
+</div>
+</div>
+<div>
+<label class="font-label-md text-label-md uppercase tracking-wider text-primary block mb-1" for="custom-notes">Specific Requests or Course Questions</label>
+<textarea class="w-full p-space-sm rounded-lg bg-surface-container-low text-primary font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-secondary" id="custom-notes" placeholder="Tell us about your wedding dates, hair requirements, or academic background..." rows="3"></textarea>
+</div>
+<div class="flex items-center gap-2">
+<input checked="" class="w-4 h-4 rounded text-primary-container focus:ring-secondary" id="inclusive-note" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface-variant" for="inclusive-note">Request private dressing room / LGBTQ+ inclusive consultation suite</label>
+</div>
+<div class="hidden p-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed text-body-sm font-body-sm font-semibold flex items-center gap-2" id="form-success-banner">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+                Thank you! Our senior concierge will call you back within 15 minutes at 09417440265.
+              </div>
+<button class="w-full py-3.5 rounded-lg bg-secondary-container text-on-secondary-fixed font-label-md text-label-md uppercase tracking-wider font-bold shadow-md hover:bg-secondary-fixed transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-[18px]">send</span>
+                Confirm Consultation Request
+              </button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-surface-container-high pt-space-xl pb-space-lg text-on-surface"><div class="w-full px-margin-lg"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-lg pb-space-xl"><div class="space-y-space-md"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">Roopsy</span><span class="px-space-xs py-0.5 rounded text-label-sm font-label-sm bg-surface-container-lowest text-secondary uppercase font-bold tracking-widest">Est. 1998</span></div><p class="font-body-md text-body-md text-on-surface-variant">Phagwara's premier couture sanctuary and certified vocational academy. Celebrating classic Punjabi regal hospitality and contemporary editorial luxury for over 26 years.</p><div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs rounded-full bg-surface-container-lowest text-primary-container text-body-sm font-body-sm shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><span class="material-symbols-outlined text-secondary-container text-[18px]">verified</span>Certified Punjab Vocational Diploma Academy</div></div><div class="space-y-space-sm"><span class="font-title-lg text-title-lg text-primary block">Visit &amp; Connect</span><p class="font-body-md text-body-md text-on-surface-variant flex items-start gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">pin_drop</span>10-A, Grand Trunk Rd, Model Town, Phagwara, Punjab 144401</p><p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">call</span><a class="hover:text-primary font-medium" href="tel:09417440265">09417440265</a></p><p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">mail</span>info@roopsysalon.com</p><a class="inline-flex items-center gap-space-xs font-label-md text-label-md uppercase text-secondary hover:underline pt-space-xs" href="https://maps.google.com/?q=10-A,+Grand+Trunk+Rd,+Model+Town,+Phagwara,+Punjab+144401" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-[16px]">map</span>Open in Google Maps</a></div><div class="space-y-space-sm"><span class="font-title-lg text-title-lg text-primary block">Hours &amp; Inclusivity</span><div class="p-space-md bg-surface-container-lowest rounded-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] space-y-space-xs"><div class="flex justify-between items-center text-body-sm font-body-sm"><span class="text-on-surface-variant">Monday – Sunday:</span><span class="font-medium text-primary">10:00 AM – 8:00 PM</span></div><div class="flex justify-between items-center text-body-sm font-body-sm"><span class="text-on-surface-variant">Academy Hours:</span><span class="font-medium text-primary">10:30 AM – 5:30 PM</span></div><div class="flex justify-between items-center text-body-sm font-body-sm"><span class="text-on-surface-variant">Bridal Suite:</span><span class="font-medium text-primary">By Appointment</span></div></div><div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant pt-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">diversity_1</span><span>Dedicated inclusive environment for all brides and visitors.</span></div></div><div class="space-y-space-sm"><span class="font-title-lg text-title-lg text-primary block">Academy Admissions</span><p class="font-body-md text-body-md text-on-surface-variant">Enroll in certified diploma programs in Advanced Cosmetology, Bridal Artistry, Hair Aesthetics, and Clinical Skincare.</p><div class="flex items-center gap-space-sm pt-space-xs"><a class="px-space-md py-space-sm rounded-lg bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider hover:bg-primary transition-all" href="#academy-section">Prospectus 2025</a><a class="px-space-md py-space-sm rounded-lg bg-surface-container-lowest text-primary-container font-label-md text-label-md uppercase tracking-wider hover:bg-surface-container-low transition-all" href="#appointment-form">Inquire</a></div><div class="flex items-center gap-space-md pt-space-sm"><a class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a class="w-9 h-9 rounded-full bg-surface-container-lowest flex items-center justify-center text-primary hover:bg-primary hover:text-on-primary transition-all" href="#"><span class="material-symbols-outlined text-[20px]">smart_display</span></a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between text-body-sm font-body-sm text-on-surface-variant gap-space-md"><p>© 1998–2025 Roopsy Salon and Academy. All rights reserved. Model Town, Phagwara, Punjab.</p><div class="flex items-center gap-space-lg"><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">Privacy Policy</a><a class="hover:text-primary transition-colors" data-path="terms-and-conditions" href="#">Terms of Service</a><a class="hover:text-primary transition-colors" data-path="academy-guidelines" href="#">Academy Guidelines</a></div></div></div></footer><script>
+  // Mobile Navigation Toggle
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileNav = document.getElementById('mobile-nav');
+  const menuIcon = document.getElementById('menu-icon');
+
+  if (mobileMenuBtn && mobileNav && menuIcon) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isHidden = mobileNav.classList.contains('hidden');
+      if (isHidden) {
+        mobileNav.classList.remove('hidden');
+        menuIcon.textContent = 'close';
+      } else {
+        mobileNav.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      }
+    });
+
+    // Close mobile menu on clicking any link
+    document.querySelectorAll('.mobile-nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNav.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileNav.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileNav.classList.add('hidden');
+        menuIcon.textContent = 'menu';
+      }
+    });
+  }
+
+  // Active navigation highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const desktopNavLinks = document.querySelectorAll('#desktop-nav a.nav-item');
+
+  function updateActiveNav() {
+    let currentId = '';
+    const scrollPosition = window.pageYOffset + 150;
+
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (currentId) {
+      desktopNavLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === '#' + currentId || (currentId === 'services-menu' && (href === '#bridal-studio' || href === '#hair-skin-care'))) {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary', 'font-bold');
+        } else if (href === '#' + currentId) {
+          link.classList.remove('text-on-surface-variant');
+          link.classList.add('text-primary', 'font-bold');
+        } else {
+          link.classList.remove('text-primary', 'font-bold');
+          link.classList.add('text-on-surface-variant');
+        }
+      });
+    }
+  }
+
+  window.addEventListener('scroll', updateActiveNav);
+  window.addEventListener('load', updateActiveNav);
+</script>
+</body></html>
